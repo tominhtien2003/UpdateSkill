@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
-  - 
+  - Iteam
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2092258145
+    locked: 0
+  - name: Foreground
+    uniqueID: 4016932711
+    locked: 0
+  - name: Player
+    uniqueID: 4063626509
+    locked: 0
+  - name: Iteam
+    uniqueID: 532871553
     locked: 0
