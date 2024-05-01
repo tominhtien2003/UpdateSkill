@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("Hit");
             ObjectPooler.Instance.GetTransform("Circle", transform.position, transform.rotation);
         }
     }

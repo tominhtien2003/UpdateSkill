@@ -13,16 +13,18 @@ public class Circle : MonoBehaviour, IShape , IPool
         timeLife+= Time.deltaTime;
         if (timeLife > 5f)
         {
-            Deactivate();
+            timeLife = 0f;
+            //Deactivate();
         }
     }
     public void Deactivate()
     {
-        gameObject.SetActive(false);
+        StartCoroutine(TimeBeforeDeactivate());
     }
 
     private IEnumerator TimeBeforeDeactivate()
     {
         yield return new WaitForSeconds(5f);
+        gameObject.SetActive(false);
     }
 }

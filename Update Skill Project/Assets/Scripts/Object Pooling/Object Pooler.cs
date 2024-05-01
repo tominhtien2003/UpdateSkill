@@ -57,8 +57,11 @@ public class ObjectPooler : MonoBehaviour
             obj.gameObject.SetActive(true);
             obj.position = position;
             obj.rotation = rotation;
+            
         }
-        poolDictionary[tag].Enqueue(obj);    
+        IPool iPoolObj = obj.GetComponent<IPool>();
+        iPoolObj.Deactivate();
+        poolDictionary[tag].Enqueue(obj);
         return obj;
     }
 }
