@@ -8,6 +8,8 @@ public class Target : MonoBehaviour
         {
             Transform squareEnemy = FindObjectOfType<EnemyFactor>().CreateEnemy(EnemyFactor.EnemyType.Square);
             squareEnemy.GetComponent<SquareEnemy>().Attack();
+            Transform circleEnemy = FindObjectOfType<EnemyFactor>().CreateEnemy(EnemyFactor.EnemyType.Circle);
+            circleEnemy.GetComponent<CircleEnemy>().Move();
         }
     }
 }

@@ -18,5 +18,17 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        /*ShapeFactory shape_ = FindObjectOfType<ShapeFactory>();
+        Transform square_ = shape_.CreateShape(ShapeFactory.ShapeType.Square);
+        square_.GetComponent<Square>().ChangeColor(Color.red);
+        IShape getSquare = shape_.GetShape(ShapeFactory.ShapeType.Square, Color.green);*/
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Hit");
+            ObjectPooler.Instance.GetTransform("Circle", transform.position, transform.rotation);
+        }
     }
 }
